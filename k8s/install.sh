@@ -16,6 +16,8 @@ if [[ "${ENVIRONMENT}" != ACS ]]; then
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
   )
   success "kubectl installed OK"
+
+  sudo apt-get -y install skopeo
 fi
 
 info "Installing krew and plugins"
