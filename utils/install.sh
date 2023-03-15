@@ -20,7 +20,7 @@ info "Installing extra utilities"
 )
 
 if [[ "${SUDO_ALLOWED}" = true ]]; then
-  sudo apt-get install -y mc btop neofetch ncdu duf
+  sudo apt-get install -y btop dos2unix duf mc ncdu neofetch tree
 fi
 
 success "Extra utilities installed OK"

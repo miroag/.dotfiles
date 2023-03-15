@@ -28,6 +28,7 @@ plugins=(
   git
   kube-ps1
   kubectl
+  poetry
   sudo
   tmux
   tmuxinator

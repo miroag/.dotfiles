@@ -11,6 +11,9 @@ if [[ "${SUDO_ALLOWED}" = true ]]; then
   sudo apt install python3-pip
 fi
 
+# poetry (does not require sudo)
+curl -sSL https://install.python-poetry.org | python3 -
+
 pip3 install -U tldr speedtest-cli
 
 success "Python utilities installed OK"
