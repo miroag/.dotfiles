@@ -14,5 +14,12 @@ info "Installing dive tool"
   wget https://github.com/wagoodman/dive/releases/download/v${DIVE_VERSION}/dive_${DIVE_VERSION}_linux_amd64.deb &&
   sudo apt install ./dive_${DIVE_VERSION}_linux_amd64.deb
 )
-success "Dive installed OK"
+
+info "Installing hadolint"
+(
+  HADOLINT_VERSION="2.12.0" &&
+  cd "$(mktemp -d)" &&
+  curl -Lo hadolint https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-arm64
+  sudo install -o root -g root -m 0755 hadolint /usr/local/bin/hadolint
+)
 
