@@ -17,9 +17,10 @@ info "Installing dive tool"
 
 info "Installing hadolint"
 (
+  # Hadolint versions: https://github.com/hadolint/hadolint/releases
   HADOLINT_VERSION="2.12.0" &&
   cd "$(mktemp -d)" &&
-  curl -Lo hadolint https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-arm64
+  curl -Lo hadolint https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64
   sudo install -o root -g root -m 0755 hadolint /usr/local/bin/hadolint
 )
 

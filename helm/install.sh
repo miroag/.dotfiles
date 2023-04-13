@@ -30,11 +30,11 @@ info "Installing helm plugins"
 
 info "Installing helmsman"
 (
-  VERSION_HELMSMAN=3.11.0
+  VERSION_HELMSMAN=3.16.4
   cd "$(mktemp -d)"
   curl -Lo helmsman.gz https://github.com/Praqma/helmsman/releases/download/v${VERSION_HELMSMAN}/helmsman_${VERSION_HELMSMAN}_linux_amd64.tar.gz
   tar xzvf helmsman.gz
-  mv helmsman ${HOME}/bin
+  sudo install -o root -g root -m 0755 helmsman /usr/local/bin/helmsman
 )
 
 success "Helmsman installed OK"
