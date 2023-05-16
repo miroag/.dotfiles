@@ -24,7 +24,6 @@ function err_handler() {
 }
 trap 'err_handler "${BASH_COMMAND}" "${?}"' ERR
 
-
 setup_gitconfig () {
   if ! [ -f git/gitconfig.local.symlink ]
   then
@@ -124,19 +123,6 @@ link_file () {
 }
 
 install_zsh () {
-  if [[ "${ENVIRONMENT}" != ACS ]]; then
-    info "Installing ZSH"
-
-    sudo apt-get install -y zsh
-
-    if [[ $SHELL != '/usr/bin/zsh' ]] ; then
-      # change zsh as default for me
-      chsh -s $(which zsh)
-      # and root
-      sudo chsh -s $(which zsh)
-    fi
-  fi
-
   # oh-my-zsh install - it MUST be installed before installing the dotfiles
   if [[ -d ~/.oh-my-zsh/ ]] ; then
     info "oh-my-zsh is already installed..."
@@ -175,14 +161,16 @@ else
     success "Created ${HOME}/bin folder"
 fi
 
-if [[ "${SUDO_ALLOWED}" == true ]]; then
-  sudo apt-get update
-fi
+
+# brew setup
+source homebrew/install.sh
 
 setup_gitconfig
-# we need to install zsh itself before running the rest of the setup. plugins can be installed later
+## we need to install zsh itself before running the rest of the setup. plugins can be installed later
 install_zsh
 install_dotfiles
-install_topics
+#install_topics
+
+brew bundle
 
 success 'Everything is installed!'

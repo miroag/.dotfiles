@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#
+
 # Installs basic utilities
 # abc folder name is used to quickly hack installation order
 set -o errexit -o nounset -o pipefail
@@ -8,12 +8,9 @@ source "${DOTFILES}/functions/core"
 
 info "Installing basic utilities"
 
-# install base utilities using sudo
-if [[ "${SUDO_ALLOWED}" = true ]]; then
+# install base utilities using brew
+brew install wget
 
-  sudo apt-get install -y curl jq git wget unzip zip xclip xsel
-
-fi
 success "Basic utilities installed OK"
 
 # I do not want to override the .ssh if it's already present - only for completely new environments
@@ -43,4 +40,9 @@ EOL
   success ".ssh configured OK"
 
 fi
+
+# Command line fuzzy finder: https://github.com/junegunn/fzf
+info "Installing fzf - Command line fuzzy finder"
+brew install fzf
+"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --no-update-rc
 

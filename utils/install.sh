@@ -10,18 +10,17 @@ source "${DOTFILES}/functions/core"
 
 info "Installing extra utilities"
 
-(
-  # https://github.com/PaulJuliusMartinez/jless
-  VERSION_JLESS=v0.7.2
-  cd "$(mktemp -d)"
-  curl -OL https://github.com/PaulJuliusMartinez/jless/releases/download/${VERSION_JLESS}/jless-${VERSION_JLESS}-x86_64-unknown-linux-gnu.zip
-  unzip jless-${VERSION_JLESS}-x86_64-unknown-linux-gnu.zip
-  mv jless "${HOME}/bin/"
-)
-
-if [[ "${SUDO_ALLOWED}" = true ]]; then
-  sudo apt-get install -y btop dos2unix duf mc ncdu neofetch tree
-fi
+brew install \
+  btop \
+  dos2unix \
+  duf \
+  jq \
+  jless \
+  mc \
+  ncdu \
+  neofetch \
+  tree \
+  tmux
 
 success "Extra utilities installed OK"
 

@@ -39,18 +39,8 @@ function git_clone_or_update() {
   fi
 }
 
-# detect what type of system we are running
-ENVIRONMENT=unknown
+ENVIRONMENT=MAC
 SUDO_ALLOWED=true
-if [[ -e ${HOME}/clouddrive ]]
-then
-    ENVIRONMENT=ACS
-    SUDO_ALLOWED=false
-fi
-
-if [[ $(grep WSL2 /proc/version) ]] ; then
-  ENVIRONMENT=WSL
-fi
 
 export ENVIRONMENT
 export SUDO_ALLOWED

@@ -45,10 +45,6 @@ function install_topic() {
 
   info "Installing ${topic} ..."
 
-  if [[ "${SUDO_ALLOWED}" == true ]]; then
-    sudo apt-get update
-  fi
-
   sh -c "${DOTFILES}/${topic}/install.sh"
 
   success 'Everything is installed!'
