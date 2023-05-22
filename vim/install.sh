@@ -25,7 +25,3 @@ git_clone_or_update https://github.com/sheerun/vim-wombat-scheme.git ${HOME}/.vi
 mv ${HOME}/.vim/colors/wombat/colors/* ${HOME}/.vim/colors/
 
 
-success "Vim utilities installed OK"
-
-
-
