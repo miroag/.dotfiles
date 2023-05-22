@@ -37,6 +37,11 @@ which sets up a few paths that'll be different on your particular machine. You a
 `dot` is a simple script that can help in a separate topic installation. Usage: `dot topic-name`
 It's sage to rerun `bootstrap` to refresh all installations
 
+### Applications with manual installation only
+
+- [muCommander](https://www.mucommander.com/)
+
+
 ## What is installed ?
 - ACS - Azure Cloud Shell
 - WSL - Windows Subsystem for Linux

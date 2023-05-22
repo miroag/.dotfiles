@@ -169,8 +169,6 @@ setup_gitconfig
 ## we need to install zsh itself before running the rest of the setup. plugins can be installed later
 install_zsh
 install_dotfiles
-#install_topics
-
-brew bundle
+install_topics
 
 success 'Everything is installed!'
