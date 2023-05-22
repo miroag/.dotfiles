@@ -22,5 +22,5 @@ brew install \
   tree \
   tmux
 
-success "Extra utilities installed OK"
 
+brew install --cask iterm2 rectangles
