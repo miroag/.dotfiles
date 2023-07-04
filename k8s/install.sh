@@ -22,3 +22,5 @@ brew install minikube
 minikube addons enable ingress
 brew install kind
 brew install --cask lens
+
+brew install mkcert nss

@@ -12,6 +12,7 @@ info "Installing extra utilities"
 
 brew install \
   btop \
+  curl \
   dos2unix \
   duf \
   jq \
