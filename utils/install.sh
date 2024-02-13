@@ -24,4 +24,7 @@ brew install \
   tmux
 
 
-brew install --cask iterm2 rectangles
+brew install --cask iterm2
+brew install --cask rectangle
+# screenshot maker https://shottr.cc/
+brew install --cask shottr

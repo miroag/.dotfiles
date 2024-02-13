@@ -12,17 +12,22 @@ info "refreshing oh-my-zsh"
 
 ZSH_CUSTOM=${ZSH_CUSTOM:=~/.oh-my-zsh/custom}
 
-# zsh completions
-info zsh-completions
-git_clone_or_update https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM}/plugins/zsh-completions
-
 # auto suggestions
 info zsh-autosuggestions
 git_clone_or_update https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM}/plugins/zsh-autosuggestions
 
+# zsh completions
+info zsh-completions
+git_clone_or_update https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM}/plugins/zsh-completions
+
+
 # syntax highlight
 info zsh-syntax-highlighting
 git_clone_or_update https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting
+
+# zsh poetry install
+info zsh-poetry
+git_clone_or_update https://github.com/darvid/zsh-poetry.git ${ZSH_CUSTOM}/plugins/poetry
 
 # powerlevel9k install
 info powerlevel9k

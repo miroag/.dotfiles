@@ -137,5 +137,3 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
-
-
